@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Accounting App</title>
+  </head>
+  <body>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+      />
+    </svg>
+
+    <header>
+      <h2>keep track of your expenses and income</h2>
+      <p>
+        A great platform to plan your expenses, manage your transactions and
+        grow faster as an entrepreneur
+      </p>
+      <button type="button" class="btn">Begin</button>
+      <img src="Glasses 2.png" alt="" width="100px" height="100px" />
+    </header>
+    <form>
+      <label>Transaction Type</label>
+      <select>
+        <option>Expense</option>
+        <option>Income</option>
+      </select>
+      <label>Amount</label>
+      <input type="number" />
+      <label>Details</label>
+      <input type="text" />
+      <button>submit</button>
+    </form>
+    <p>Manage Transactions</p>
+    <div>
+      <button>Transactions</button>
+      <button>Expenses</button>
+      <button>Income</button>
+      <button>Scheduled Payments</button>
+      <button>Completed Payments</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Transaction Type</th>
+          <th>Details</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>Date</th>
+          <th>Menu</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Expense</td>
+          <td>Fuel Payment</td>
+          <td>$60</td>
+          <td>Pending</td>
+          <td>25/04/2024</td>
+          <td>
+            <button type="button" class="btn">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                  />
+                </svg>
+              </div>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>Income</td>
+          <td>customer bill</td>
+          <td>$60</td>
+          <td>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+              />
+            </svg>
+          </td>
+          <td>25/04/2024</td>
+          <td>
+            <button type="button" class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                />
+              </svg>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <p>Total</p>
+      <p>$0000</p>
+    </div>
+
+    <p>Results</p>
+    <div>
+      <div>
+        <p>Income</p>
+        <p>$0000</p>
+      </div>
+      <div>
+        <p>Expenses</p>
+        <p>$0000</p>
+      </div>
+      <div>
+        <p>Profit</p>
+        <p>$0000</p>
+      </div>
+    </div>
+  </body>
+</html>
