@@ -1,6 +1,141 @@
-.btn {
-  outline-style: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #444;
+  background-color: #f3f3f3;
+  height: 100vh;
+  padding: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+.welcome {
+  margin-bottom: 2rem;
+}
+
+.form,
+.transactions,
+.results,
+.intro {
+  margin-bottom: 2rem;
+}
+
+.app {
+  max-width: 70rem;
+  margin: 1rem auto;
+}
+
+.intro {
+  box-shadow: 0.002rem 0.002rem 0.25rem rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  line-height: 2;
+}
+
+.btn_intro {
+  margin-top: 2rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 3rem);
+  box-shadow: 0.002rem 0.002rem 0.25rem rgba(0, 0, 0, 0.25);
+  justify-content: center;
+  align-content: center;
+  padding: 2rem;
+}
+
+.form_label,
+.form_input {
+  justify-self: center;
+}
+
+.form_input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.form_input {
+  width: 50%;
   border: none;
-  height: 1rem;
-  width: 1rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: center;
+  color: #333;
+  padding: 0.3rem 1rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s;
+}
+
+.form_label {
+  align-self: end;
+  /* margin-bottom: 1rem; */
+}
+
+.btn,
+.btn_transactions {
+  border: none;
+  background: none;
+}
+
+.btn_form {
+  grid-column: 2;
+  align-self: self-end;
+}
+
+.transactions_heading,
+.btn_transactions {
+  margin-bottom: 1rem;
+}
+
+.btn_transactions {
+  margin-right: 1.5rem;
+}
+
+.total,
+.results__income,
+.results__expense,
+.results__profit {
+  width: 10rem;
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+
+.transactions-results {
+  display: grid;
+  grid-template-columns: 7fr 2fr;
+  gap: 4rem;
+}
+
+.transactions {
+  padding: 3rem;
+  box-shadow: 0.002rem 0.002rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+.results {
+  box-shadow: 0.002rem 0.002rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 5rem 4rem;
+}
+td {
+  min-width: 8rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+tr.all_transactions > td {
+  padding: 0.5rem;
 }

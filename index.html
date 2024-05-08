@@ -12,150 +12,150 @@
     <title>Accounting App</title>
   </head>
   <body>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      class="w-6 h-6"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-      />
-    </svg>
+    <nav>
+      <div>
+        <p class="app_logo">DANCO</p>
+      </div>
 
-    <header>
-      <h2>keep track of your expenses and income</h2>
-      <p>
-        A great platform to plan your expenses, manage your transactions and
-        grow faster as an entrepreneur
-      </p>
-      <button type="button" class="btn">Begin</button>
-      <img src="Glasses 2.png" alt="" width="100px" height="100px" />
-    </header>
-    <form>
-      <label>Transaction Type</label>
-      <select>
-        <option>Expense</option>
-        <option>Income</option>
-      </select>
-      <label>Amount</label>
-      <input type="number" />
-      <label>Details</label>
-      <input type="text" />
-      <button>submit</button>
-    </form>
-    <p>Manage Transactions</p>
-    <div>
-      <button>Transactions</button>
-      <button>Expenses</button>
-      <button>Income</button>
-      <button>Scheduled Payments</button>
-      <button>Completed Payments</button>
-    </div>
-    <table>
-      <thead>
-        <tr>
-          <th>Transaction Type</th>
-          <th>Details</th>
-          <th>Amount</th>
-          <th>Status</th>
-          <th>Date</th>
-          <th>Menu</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Expense</td>
-          <td>Fuel Payment</td>
-          <td>$60</td>
-          <td>Pending</td>
-          <td>25/04/2024</td>
-          <td>
-            <button type="button" class="btn">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-                  />
-                </svg>
-              </div>
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.2"
+          stroke="currentColor"
+          class="logout_logo"
+          width="3rem"
+          height="4rem"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+          />
+        </svg>
+      </div>
+    </nav>
+
+    <main class="app">
+      <p class="welcome">Welcome</p>
+      <div class="intro">
+        <h2 class="intro_heading">keep track of your expenses and income</h2>
+        <p class="intro_sentence">
+          "Introducing the Ultimate Solution for Your Financial Peace of Mind!
+          Welcome to DANCO, your premier destination for all things accounting.
+          Whether you're a seasoned entrepreneur, a budding freelancer, or
+          simply managing your personal finances, we've got you covered. Unlock
+          the power of precise financial management with our intuitive platform.
+          Say goodbye to the headache of balancing spreadsheets and hello to
+          streamlined accounting processes.
+        </p>
+        <button class="btn btn_intro">Begin</button>
+      </div>
+
+      <form class="form">
+        <label class="form_label form_label--transaction-type"
+          >Transaction Type</label
+        >
+        <label class="form_label form_label--amount">Amount</label>
+        <select class="form_input form_input--type">
+          <option value="expense">Expense</option>
+          <option value="income">Income</option>
+        </select>
+        <input class="form_input form_input--amount" type="number" />
+        <label class="form_label form_label--details">Details</label>
+        <label class="form_label form_label--status">Status</label>
+        <input class="form_input form_input--details" type="text" />
+        <input class="form_input form_input--status" type="text" />
+        <button class="btn btn_form">submit</button>
+      </form>
+
+      <div class="transactions-results">
+        <div class="transactions">
+          <h4 class="transactions_heading">Manage Transactions</h4>
+          <div class="btn_transactions">
+            <button class="btn_transactions btn_transactions--alltrans">
+              All Transactions
             </button>
-          </td>
-        </tr>
-        <tr>
-          <td>Income</td>
-          <td>customer bill</td>
-          <td>$60</td>
-          <td>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
+            <button class="btn_transactions btn_transactions--expenses">
+              Expenses
+            </button>
+            <button class="btn_transactions btn_transactions--incomes">
+              Income
+            </button>
+            <button
+              class="btn_transactions btn_transactions--scheduledpayments"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-              />
-            </svg>
-          </td>
-          <td>25/04/2024</td>
-          <td>
-            <button type="button" class="btn">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-                />
-              </svg>
+              Scheduled Payments
             </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div>
-      <p>Total</p>
-      <p>$0000</p>
-    </div>
+            <button
+              class="btn_transactions btn_transactions--completedpayments"
+            >
+              Completed Payments
+            </button>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Transaction Type</th>
+                <th>Details</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="all_transactions">
+                <td
+                  class="all_transactions--type all_transactions--type-expenses"
+                >
+                  Expense
+                </td>
+                <td class="all_transactions--details">Fuel Payment</td>
+                <td class="all_transactions--amount">$60</td>
+                <td class="all_transactions--status">Pending</td>
+                <td class="all_transactions--date">25/04/2024</td>
+                <td class="all_transactions--actions">...</td>
+              </tr>
 
-    <p>Results</p>
-    <div>
-      <div>
-        <p>Income</p>
-        <p>$0000</p>
+              <tr class="all_transactions">
+                <td
+                  class="all_transactions--type all_transactions--type-income"
+                >
+                  Income
+                </td>
+                <td class="all_transactions--details">customer Bill</td>
+                <td class="all_transactions--amount">$60</td>
+                <td class="all_transactions--status">Completed</td>
+                <td class="all_transactions--date">25/04/2024</td>
+                <td class="all_transactions--action">...</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="total">
+            <p class="total__label total__label--Total Transactions">Total</p>
+            <p class="total__figure">$0000</p>
+          </div>
+        </div>
+        <div class="results">
+          <h4 class="results__heading">Overall Results</h4>
+          <div>
+            <div class="results__income">
+              <p class="results__income--label">Income</p>
+              <p class="results__income--figure">$0000</p>
+            </div>
+            <div class="results__expense">
+              <p class="results__expense--label">Expenses</p>
+              <p class="results__expense--figure">$0000</p>
+            </div>
+            <div class="results__profit">
+              <p class="results__profit--label">Profit</p>
+              <p class="results__profit--figure">$0000</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <p>Expenses</p>
-        <p>$0000</p>
-      </div>
-      <div>
-        <p>Profit</p>
-        <p>$0000</p>
-      </div>
-    </div>
+    </main>
   </body>
 </html>
