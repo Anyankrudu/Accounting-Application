@@ -13,11 +13,22 @@
   </head>
   <body>
     <nav>
-      <div>
-        <p class="app_logo">DANCO</p>
+      <div class="caption">
+        <h5 class="caption_sentence">Danco for start up entrepreneurs</h5>
+        <h1 class="caption_heading">Easy, Simple and efficient</h1>
       </div>
+      <form class="form_signin">
+        <label class="form_label--username"><strong>Username</strong></label>
+        <input class="form_input" type="text" />
+        <label class="form_label--passcode"><strong>Passcode</strong></label>
+        <input class="form_input" type="number" />
+        <button class="btn btn_signin">Sign in</button>
+      </form>
+    </nav>
 
-      <div>
+    <main class="app">
+      <div class="logos">
+        <p class="app_logo">DANCO</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -35,123 +46,122 @@
           />
         </svg>
       </div>
-    </nav>
-
-    <main class="app">
-      <p class="welcome">Welcome</p>
-      <div class="intro">
-        <h2 class="intro_heading">keep track of your expenses and income</h2>
-        <p class="intro_sentence">
-          "Introducing the Ultimate Solution for Your Financial Peace of Mind!
-          Welcome to DANCO, your premier destination for all things accounting.
-          Whether you're a seasoned entrepreneur, a budding freelancer, or
-          simply managing your personal finances, we've got you covered. Unlock
-          the power of precise financial management with our intuitive platform.
-          Say goodbye to the headache of balancing spreadsheets and hello to
-          streamlined accounting processes.
-        </p>
-        <button class="btn btn_intro">Begin</button>
-      </div>
-
-      <form class="form">
-        <label class="form_label form_label--transaction-type"
-          >Transaction Type</label
-        >
-        <label class="form_label form_label--amount">Amount</label>
-        <select class="form_input form_input--type">
-          <option value="expense">Expense</option>
-          <option value="income">Income</option>
-        </select>
-        <input class="form_input form_input--amount" type="number" />
-        <label class="form_label form_label--details">Details</label>
-        <label class="form_label form_label--status">Status</label>
-        <input class="form_input form_input--details" type="text" />
-        <input class="form_input form_input--status" type="text" />
-        <button class="btn btn_form">submit</button>
-      </form>
-
-      <div class="transactions-results">
-        <div class="transactions">
-          <h4 class="transactions_heading">Manage Transactions</h4>
-          <div class="btn_transactions">
-            <button class="btn_transactions btn_transactions--alltrans">
-              All Transactions
-            </button>
-            <button class="btn_transactions btn_transactions--expenses">
-              Expenses
-            </button>
-            <button class="btn_transactions btn_transactions--incomes">
-              Income
-            </button>
-            <button
-              class="btn_transactions btn_transactions--scheduledpayments"
-            >
-              Scheduled Payments
-            </button>
-            <button
-              class="btn_transactions btn_transactions--completedpayments"
-            >
-              Completed Payments
-            </button>
-          </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Transaction Type</th>
-                <th>Details</th>
-                <th>Amount</th>
-                <th>Status</th>
-                <th>Date</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="all_transactions">
-                <td
-                  class="all_transactions--type all_transactions--type-expenses"
-                >
-                  Expense
-                </td>
-                <td class="all_transactions--details">Fuel Payment</td>
-                <td class="all_transactions--amount">$60</td>
-                <td class="all_transactions--status">Pending</td>
-                <td class="all_transactions--date">25/04/2024</td>
-                <td class="all_transactions--actions">...</td>
-              </tr>
-
-              <tr class="all_transactions">
-                <td
-                  class="all_transactions--type all_transactions--type-income"
-                >
-                  Income
-                </td>
-                <td class="all_transactions--details">customer Bill</td>
-                <td class="all_transactions--amount">$60</td>
-                <td class="all_transactions--status">Completed</td>
-                <td class="all_transactions--date">25/04/2024</td>
-                <td class="all_transactions--action">...</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="total">
-            <p class="total__label total__label--Total Transactions">Total</p>
-            <p class="total__figure">$0000</p>
-          </div>
+      <div class="sub_app">
+        <p class="welcome">Welcome</p>
+        <div class="intro">
+          <h2 class="intro_heading">keep track of your expenses and income</h2>
+          <p class="intro_sentence">
+            "Introducing the Ultimate Solution for Your Financial Peace of Mind!
+            Welcome to DANCO, your premier destination for all things
+            accounting. Whether you're a seasoned entrepreneur, a budding
+            freelancer, or simply managing your personal finances, we've got you
+            covered. Unlock the power of precise financial management with our
+            intuitive platform. Say goodbye to the headache of balancing
+            spreadsheets and hello to streamlined accounting processes.
+          </p>
+          <button class="btn btn_intro">Begin &DownArrow;</button>
         </div>
-        <div class="results">
-          <h4 class="results__heading">Overall Results</h4>
-          <div>
-            <div class="results__income">
-              <p class="results__income--label">Income</p>
-              <p class="results__income--figure">$0000</p>
+
+        <div>
+          <form class="form_app">
+            <label class="form_label form_label--transaction-type"
+              >Transaction Type</label
+            >
+            <label class="form_label form_label--amount">Amount</label>
+            <select class="form_input form_input--type">
+              <option value="expense">Expense</option>
+              <option value="income">Income</option>
+            </select>
+            <input class="form_input form_input--amount" type="number" />
+            <label class="form_label form_label--details">Details</label>
+            <label class="form_label form_label--status">Status</label>
+            <input class="form_input form_input--details" type="text" />
+            <input class="form_input form_input--status" type="text" />
+            <button class="btn btn_form">Save &DownArrow;</button>
+          </form>
+        </div>
+
+        <div class="transactions-results">
+          <div class="transactions">
+            <h4 class="transactions_heading">Manage Transactions</h4>
+            <div>
+              <button
+                class="btn btn_transactions btn_transactions--alltransactions"
+              >
+                All Transactions
+              </button>
+              <button class="btn btn_transactions btn_transactions--expenses">
+                Expenses
+              </button>
+              <button class="btn btn_transactions btn_transactions--incomes">
+                Income
+              </button>
+              <button
+                class="btn btn_transactions btn_transactions--scheduledpayments"
+              >
+                Scheduled Payments
+              </button>
+              <button
+                class="btn btn_transactions btn_transactions--completedpayments"
+              >
+                Completed Payments
+              </button>
             </div>
-            <div class="results__expense">
-              <p class="results__expense--label">Expenses</p>
-              <p class="results__expense--figure">$0000</p>
+            <table cellspacing="6" cellpadding="10">
+              <thead>
+                <tr>
+                  <th>Transaction Type</th>
+                  <th>Details</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="all_transactions" class="all_transactions--type">
+                  <td class="all_transactions--type-expenses">Expense</td>
+                  <td class="all_transactions--details">Fuel Payment</td>
+                  <td class="all_transactions--amount">$60</td>
+                  <td class="all_transactions--status">Pending</td>
+                  <td class="all_transactions--date">25/04/2024</td>
+                  <td class="all_transactions--actions">...</td>
+                </tr>
+
+                <tr id="all_transactions" class="all_transactions--type">
+                  <td
+                    class="all_transactions--type all_transactions--type-income"
+                  >
+                    Income
+                  </td>
+                  <td class="all_transactions--details">customer's Bill</td>
+                  <td class="all_transactions--amount">$60</td>
+                  <td class="all_transactions--status">Completed</td>
+                  <td class="all_transactions--date">25/04/2024</td>
+                  <td class="all_transactions--action">...</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="total">
+              <p class="total__label total__label--Total Transactions">Total</p>
+              <p class="total__figure">$0000</p>
             </div>
-            <div class="results__profit">
-              <p class="results__profit--label">Profit</p>
-              <p class="results__profit--figure">$0000</p>
+          </div>
+          <div class="results">
+            <h4 class="results__heading">Overall Results</h4>
+            <div>
+              <div class="results__income">
+                <p class="results__income--label">Income</p>
+                <p class="results__income--figure">$0000</p>
+              </div>
+              <div class="results__expense">
+                <p class="results__expense--label">Expenses</p>
+                <p class="results__expense--figure">$0000</p>
+              </div>
+              <div class="results__profit">
+                <p class="results__profit--label">Profit</p>
+                <p class="results__profit--figure">$0000</p>
+              </div>
             </div>
           </div>
         </div>

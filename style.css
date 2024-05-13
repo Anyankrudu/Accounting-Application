@@ -1,3 +1,17 @@
+:root {
+  --color-primary: #c5a57e;
+  --color-secondary: #ffcb03;
+  --color-tertiary: #ff585f;
+  --color-primary-darker: #4bbb7d;
+  --color-secondary-darker: #ffbb00;
+  --color-tertiary-darker: #fd424b;
+  --color-primary-opacity: #5ec5763a;
+  --color-secondary-opacity: #ffcd0331;
+  --color-tertiary-opacity: #ff58602d;
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,15 +26,46 @@ body {
   padding: 2rem;
 }
 
-nav {
+.logos {
   display: flex;
   justify-content: space-between;
 }
+
+h4,
+h2,
+.caption_heading {
+  color: var(--color-primary);
+}
 .welcome {
   margin-bottom: 2rem;
+  margin-top: 4rem;
 }
 
-.form,
+nav {
+  max-width: 25rem;
+  margin: 4rem auto;
+  padding: 2rem;
+  border-radius: 0.4rem;
+  box-shadow: 0.002rem 0.002rem 0.25rem rgba(0, 0, 0, 0.25);
+  display: grid;
+  grid-template-columns: 1fr;
+  opacity: 0;
+  /* background-color: #c5a57e; */
+}
+
+.caption {
+  display: grid;
+  grid-template-rows: 4fr 6fr;
+  justify-self: center;
+}
+
+.caption_sentence,
+.caption_heading {
+  justify-self: center;
+  max-width: 20rem;
+}
+
+.form_app,
 .transactions,
 .results,
 .intro {
@@ -28,6 +73,10 @@ nav {
 }
 
 .app {
+  /* opacity: 0; */
+}
+
+.sub_app {
   max-width: 70rem;
   margin: 1rem auto;
 }
@@ -42,7 +91,39 @@ nav {
   margin-top: 2rem;
 }
 
-.form {
+.btn,
+.btn_transactions {
+  background: none;
+  padding: 0.4rem 0.4rem;
+  border-radius: 0.9rem;
+  border: none;
+}
+
+.btn_signin {
+  grid-row: 6;
+  width: 10rem;
+  border-radius: 0.6rem;
+  background-color: black;
+  color: white;
+}
+
+.btn:hover {
+  border: 0.1rem solid var(--color-primary);
+}
+
+.btn_form {
+  grid-column: 2;
+  align-self: self-end;
+  justify-self: center;
+}
+
+.transactions_heading,
+.btn_transactions {
+  margin-bottom: 1rem;
+  margin-right: 1.5rem;
+}
+
+.form_app {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(5, 3rem);
@@ -50,6 +131,19 @@ nav {
   justify-content: center;
   align-content: center;
   padding: 2rem;
+}
+
+.form_signin {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 3rem);
+}
+
+.form_label--username,
+.form_label--passcode,
+.btn_signin {
+  justify-self: center;
+  align-self: self-end;
 }
 
 .form_label,
@@ -80,26 +174,6 @@ nav {
   /* margin-bottom: 1rem; */
 }
 
-.btn,
-.btn_transactions {
-  border: none;
-  background: none;
-}
-
-.btn_form {
-  grid-column: 2;
-  align-self: self-end;
-}
-
-.transactions_heading,
-.btn_transactions {
-  margin-bottom: 1rem;
-}
-
-.btn_transactions {
-  margin-right: 1.5rem;
-}
-
 .total,
 .results__income,
 .results__expense,
@@ -113,7 +187,7 @@ nav {
 .transactions-results {
   display: grid;
   grid-template-columns: 7fr 2fr;
-  gap: 4rem;
+  gap: 1rem;
 }
 
 .transactions {
@@ -123,19 +197,36 @@ nav {
 
 .results {
   box-shadow: 0.002rem 0.002rem 0.25rem rgba(0, 0, 0, 0.25);
+  height: 8rem;
+  padding: 3rem;
 }
+
 table {
   table-layout: fixed;
   width: 100%;
-  border-collapse: collapse;
-  border-spacing: 5rem 4rem;
 }
+
 td {
   min-width: 8rem;
   text-align: center;
   margin-top: 1rem;
 }
 
-tr.all_transactions > td {
+tr.all_transactions--type td {
   padding: 0.5rem;
+  padding-left: 0;
+  /* border-left: 0.2rem solid var(--color-primary); */
+}
+
+#all_transactions {
+  box-shadow: 0.002rem 0.02rem 0.15rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.3rem;
+  border: 0.02rem solid var(--color-primary);
+}
+
+.all_transactions--type-expenses,
+.all_transactions--type-income {
+  border-left: 0.3rem solid var(--color-primary);
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
 }
