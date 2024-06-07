@@ -24,7 +24,7 @@ body {
   background-color: #f3f3f3;
   height: 100vh;
   padding: 2rem;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .logos {
@@ -76,24 +76,27 @@ aside {
 .app {
   max-width: 70rem;
   margin: 1rem auto;
+  line-height: 2;
 }
 
 .intro {
   box-shadow: 0.002rem 0.002rem 0.25rem rgba(0, 0, 0, 0.25);
   padding: 2rem;
-  line-height: 2;
 }
-
-.btn_intro {
-  margin-top: 2rem;
-}
-
-.btn,
-.btn_transactions {
+.btn {
   background: none;
   padding: 0.4rem 0.4rem;
   border-radius: 0.9rem;
   border: none;
+  border: 0.1rem solid transparent;
+}
+
+.btn:hover {
+  border: 0.1rem solid var(--color-primary);
+}
+
+.btn_intro {
+  margin-top: 2rem;
 }
 
 .btn_signin {
@@ -101,11 +104,13 @@ aside {
   width: 10rem;
   border-radius: 0.6rem;
   background-color: black;
+  padding: 0.4rem 0.4rem;
   color: white;
 }
 
-.btn:hover {
-  border: 0.1rem solid var(--color-primary);
+.btn_signin:hover {
+  background-color: white;
+  color: black;
 }
 
 .btn_form {
@@ -116,8 +121,9 @@ aside {
 
 .transactions_heading,
 .btn_transactions {
-  margin-bottom: 1rem;
-  margin-right: 1.5rem;
+  margin-bottom: 0.2rem;
+  margin-right: 0.5rem;
+  margin-left: 0.7rem;
 }
 
 .form_app {
@@ -209,20 +215,22 @@ td {
   margin-top: 1rem;
 }
 
-tr.all_transactions--type td {
+tr.all_transactions--row2 td {
   padding: 0.5rem;
   padding-left: 0;
+
   /* border-left: 0.2rem solid var(--color-primary); */
 }
 
-#all_transactions {
+#all_transactions--row1 {
   box-shadow: 0.002rem 0.02rem 0.15rem rgba(0, 0, 0, 0.25);
   border-radius: 0.3rem;
-  border: 0.02rem solid var(--color-primary);
+  border-left: 0.3rem solid var(--color-primary);
+  padding: 0.5rem;
+  padding-left: 0;
 }
 
-.all_transactions--type-expenses,
-.all_transactions--type-income {
+.all_transactions_type {
   border-left: 0.3rem solid var(--color-primary);
   border-top-left-radius: 0.3rem;
   border-bottom-left-radius: 0.3rem;

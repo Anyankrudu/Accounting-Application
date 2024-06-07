@@ -19,16 +19,24 @@
       </div>
       <form class="form_signin">
         <label class="form_label--username"><strong>Username</strong></label>
-        <input class="form_input" type="text" />
+        <input
+          class="form_input form_input--user"
+          type="text"
+          placeholder="user"
+          class="form_input"
+          autocomplete="on"
+        />
         <label class="form_label--passcode"><strong>Passcode</strong></label>
         <input
           type="password"
           placeholder="PIN"
           maxlength="4"
-          class="form_input"
+          class="form_input form_input--pin"
+          autocomplete="on"
         />
-        <button class="btn btn_signin">Sign in</button>
+        <button class="btn_signin">Sign in</button>
       </form>
     </aside>
+    <script src="script.js"></script>
   </body>
 </html>
