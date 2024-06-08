@@ -215,14 +215,14 @@ td {
   margin-top: 1rem;
 }
 
-tr.all_transactions--row2 td {
+tr.all_transactions--row td {
   padding: 0.5rem;
   padding-left: 0;
 
   /* border-left: 0.2rem solid var(--color-primary); */
 }
 
-#all_transactions--row1 {
+#all_transactions {
   box-shadow: 0.002rem 0.02rem 0.15rem rgba(0, 0, 0, 0.25);
   border-radius: 0.3rem;
   border-left: 0.3rem solid var(--color-primary);
