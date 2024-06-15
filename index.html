@@ -12,27 +12,30 @@
     <title>Accounting App</title>
   </head>
   <body>
-    <nav class="logos">
-      <p class="app_logo">DANCO</p>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.2"
-        stroke="currentColor"
-        class="logout_logo"
-        width="3rem"
-        height="4rem"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-        />
-      </svg>
+    <nav>
+      <div class="Danco_signin__form">
+        <h3 class="Danco">Danco for start up entrepreneurs</h3>
+        <form class="signin__form">
+          <input
+            class="signin_input signin__input--user"
+            type="text"
+            placeholder="user"
+            autocomplete="on"
+          />
+          <input
+            type="text"
+            placeholder="PIN"
+            maxlength="4"
+            class="signin_input signin__input--pin"
+            autocomplete="on"
+          />
+          <button id="btn_signin" type="button">Sign in</button>
+        </form>
+      </div>
+
+      <h3 class="welcome">Easy, Simple and efficient</h3>
     </nav>
     <main class="app">
-      <p class="welcome">Welcome</p>
       <div class="intro">
         <h2 class="intro_heading">keep track of your expenses and income</h2>
         <p class="intro_sentence">
@@ -103,7 +106,7 @@
                 <th>Actions</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="transaction_summary">
               <tr id="all_transactions" class="all_transactions--row">
                 <td class="all_transactions_type">Expense</td>
                 <td class="all_transactions--details">Fuel Payment</td>
@@ -147,7 +150,6 @@
         </div>
       </div>
     </main>
-
     <script src="script.js"></script>
   </body>
 </html>

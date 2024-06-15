@@ -24,46 +24,20 @@ body {
   background-color: #f3f3f3;
   height: 100vh;
   padding: 2rem;
-  /* opacity: 0; */
-}
-
-.logos {
-  display: flex;
-  justify-content: space-between;
+  opacity: 100;
+  transition: opacity 0.5s;
 }
 
 h4,
-h2,
-.caption_heading {
+h2 {
   color: var(--color-primary);
 }
 .welcome {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 2rem;
   margin-top: 2rem;
-}
-
-aside {
-  max-width: 25rem;
-  margin: 4rem auto;
-  padding: 2rem;
-  border-radius: 0.4rem;
-  box-shadow: 0.002rem 0.002rem 0.25rem rgba(0, 0, 0, 0.25);
-  display: grid;
-  grid-template-columns: 1fr;
-  /* opacity: 0; */
-  /* background-color: #c5a57e; */
-}
-
-.caption {
-  display: grid;
-  grid-template-rows: 4fr 6fr;
-  justify-self: center;
-}
-
-.caption_sentence,
-.caption_heading {
-  justify-self: center;
-  max-width: 20rem;
+  justify-items: start;
 }
 
 .form_app,
@@ -73,10 +47,20 @@ aside {
   margin-bottom: 2rem;
 }
 
-.app {
-  max-width: 70rem;
+.Danco_signin__form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app,
+nav {
+  max-width: 75rem;
   margin: 1rem auto;
   line-height: 2;
+}
+
+.app {
+  opacity: 0;
 }
 
 .intro {
@@ -99,16 +83,39 @@ aside {
   margin-top: 2rem;
 }
 
-.btn_signin {
+.signin_input {
+  border: none;
+  padding: 0.01rem 0.1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  text-align: center;
+  width: 8rem;
+  border-radius: 5rem;
+  margin-right: 1rem;
+  color: inherit;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+}
+
+.signin_input:focus {
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.signin_input::placeholder {
+  color: #bbb;
+}
+
+#btn_signin {
   grid-row: 6;
-  width: 10rem;
+  width: 4rem;
   border-radius: 0.6rem;
   background-color: black;
-  padding: 0.4rem 0.4rem;
+  padding: 0.1rem 0.1rem;
   color: white;
 }
 
-.btn_signin:hover {
+#btn_signin:hover {
   background-color: white;
   color: black;
 }
@@ -136,15 +143,7 @@ aside {
   padding: 2rem;
 }
 
-.form_signin {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 3rem);
-}
-
-.form_label--username,
-.form_label--passcode,
-.btn_signin {
+#btn_signin {
   justify-self: center;
   align-self: self-end;
 }
@@ -154,7 +153,8 @@ aside {
   justify-self: center;
 }
 
-.form_input:focus {
+.form_input,
+.signin_input:focus {
   outline: none;
   background-color: rgba(255, 255, 255, 0.6);
 }

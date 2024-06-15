@@ -52,10 +52,12 @@ const account2 = {
 
 const accounts = [account1, account2];
 
-const btnSignin = document.querySelector(".btn_signin");
-const inputSigninPin = document.querySelector(".form_input--pin");
-const inputSigninUsername = document.querySelector(".form_input--user");
+const btnSignin = document.querySelector("#btn_signin");
+const inputSigninPin = document.querySelector(".signin__input--pin");
+const inputSigninUsername = document.querySelector(".signin__input--user");
 const containerTransactions = document.querySelector("tbody");
+const containerApp = document.querySelector(".app");
+const labelUser = document.querySelector(".welcome");
 
 const createUsernames = function (acts, num) {
   acts.forEach(function (act, i, end = "...") {
@@ -84,12 +86,14 @@ const displayAccountTransactions = function (act) {
       return typeof acc[i] === "object";
     });
 
+    console.log(trans);
+
     let details = trans.details;
     let amt = trans.amount;
     let type = amt > 0 ? "Income" : "Expense";
     let status = type === "Income" ? "Completed" : "Incomplete";
 
-    const html = `    
+    const html = `
    <tr id="all_transactions" class="all_transactions--row">
     <td class="all_transactions_type">${type}</td>
     <td class="all_transactions--details">${details}</td>
@@ -101,20 +105,26 @@ const displayAccountTransactions = function (act) {
 
   `;
 
-    containerTransactions.insertAdjacentHTML("afterbegin", html);
+    containerTransactions.insertAdjacentHTML("beforebegin", html);
   });
 };
-displayAccountTransactions(account2);
 
 let currentAccount;
 
-btnSignin.addEventListener("click", function (e) {
-  e.preventDefault();
-  currentAccount = accounts.find(
-    (acc) => acc.username === inputSigninUsername.value
-  );
+if (btnSignin) {
+  btnSignin.addEventListener("click", function (e) {
+    e.preventDefault();
+    currentAccount = accounts.find(
+      (acc) => acc.username === inputSigninUsername.value
+    );
 
-  if (currentAccount?.pin === Number(inputSigninPin.value)) {
-    // Display UI and message
-  }
-});
+    if (currentAccount?.pin === Number(inputSigninPin.value)) {
+      labelUser.textContent = `Welcome ${currentAccount.owner}`;
+      btnSignin.textContent = "sign out";
+      displayAccountTransactions(currentAccount);
+      containerApp.style.opacity = 100;
+    }
+  });
+  // displayAccountTransactions(currentAccount);
+  // containerApp.Style.opacity = 100;
+}
